@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { TextField, Button, Box } from '@mui/material'
 
 const PhotoForm = ({ onAddPhoto }) => {
     const [title, setTitle] = useState('')
@@ -14,30 +15,29 @@ const PhotoForm = ({ onAddPhoto }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                placeholder="Title"
+        <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <TextField
+                label="Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 required
             />
-            <input
-                type="text"
-                placeholder="Description"
+            <TextField
+                label="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 required
             />
-            <input
-                type="text"
-                placeholder="URL"
+            <TextField
+                label="URL"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 required
             />
-            <button type="submit">Add Photo</button>
-        </form>
+            <Button variant="contained" color="primary" type="submit">
+                Add Photo
+            </Button>
+        </Box>
     )
 }
 
