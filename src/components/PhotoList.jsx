@@ -1,17 +1,16 @@
-import { List, ListItem, ListItemText, ListItemAvatar, Avatar } from '@mui/material'
-
 const PhotoList = ({ photos }) => {
     return (
-        <List>
+        <ul>
             {photos.map((photo) => (
-                <ListItem key={photo.id}>
-                    <ListItemAvatar>
-                        <Avatar src={photo.url} alt={photo.title} />
-                    </ListItemAvatar>
-                    <ListItemText primary={photo.title} secondary={photo.description} />
-                </ListItem>
+                <li key={photo.id} style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+                    <img src={photo.url} alt={photo.title} style={{ width: '50px', height: '50px', marginRight: '1rem' }} />
+                    <div>
+                        <h3>{photo.title}</h3>
+                        <p>{photo.description}</p>
+                    </div>
+                </li>
             ))}
-        </List>
+        </ul>
     )
 }
 
