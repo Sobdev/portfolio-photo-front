@@ -11,7 +11,7 @@ const HomePage = () => {
 
     return (
         <div>
-            <h1>Photo Portfolio</h1>
+            <h1>Photo Portfolio Miki</h1>
             <PhotoForm onAddPhoto={addPhoto} />
             <PhotoList photos={photos} />
         </div>
