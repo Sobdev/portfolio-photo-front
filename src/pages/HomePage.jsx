@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import PhotoForm from '../components/PhotoForm'
-import PhotoList from '../components/PhotoList'
+import { useState } from 'react';
+import PhotoForm from '../components/PhotoForm';
+import PhotoList from '../components/PhotoList';
 
 const HomePage = () => {
-    const [photos, setPhotos] = useState([])
+    const [photos, setPhotos] = useState([]);
 
     const addPhoto = (photo) => {
-        setPhotos([...photos, { ...photo, id: Date.now() }])
-    }
+        setPhotos([...photos, { ...photo, id: Date.now() }]);
+    };
 
     return (
         <div>
@@ -15,7 +15,7 @@ const HomePage = () => {
             <PhotoForm onAddPhoto={addPhoto} />
             <PhotoList photos={photos} />
         </div>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;

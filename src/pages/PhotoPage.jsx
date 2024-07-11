@@ -1,8 +1,8 @@
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 
 const PhotoPage = ({ photos }) => {
-    const { id } = useParams()
-    const photo = photos.find((photo) => photo.id === parseInt(id))
+    const { id } = useParams();
+    const photo = photos.find((photo) => photo.id === parseInt(id));
 
     return (
         <div>
@@ -16,7 +16,7 @@ const PhotoPage = ({ photos }) => {
                 <p>Photo not found</p>
             )}
         </div>
-    )
-}
+    );
+};
 
-export default PhotoPage
+export default PhotoPage;

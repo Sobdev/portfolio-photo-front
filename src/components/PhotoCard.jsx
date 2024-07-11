@@ -5,7 +5,7 @@ const PhotoCard = ({ photo }) => {
             <h3>{photo.title}</h3>
             <p>{photo.description}</p>
         </div>
-    )
-}
+    );
+};
 
-export default PhotoCard
+export default PhotoCard;
